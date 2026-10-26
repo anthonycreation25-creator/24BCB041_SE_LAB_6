@@ -1,0 +1,95 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSBS Class Timetable</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="brand">
+      <div class="logo">C</div>
+      <div>
+        <h1>CSBS Timetable</h1>
+        <p>Computer Science & Business Systems</p>
+      </div>
+    </div>
+    <button id="todayBtn" class="today-btn">Today</button>
+  </header>
+
+  <main class="container">
+    <section class="welcome">
+      <div>
+        <span class="eyebrow">YOUR ACADEMIC PLANNER</span>
+        <h2>Class Schedule</h2>
+        <p>Select a date to view your classes for that day.</p>
+      </div>
+      <div class="course-tag">CSBS · Weekly Schedule</div>
+    </section>
+
+    <div class="dashboard">
+      <section class="panel calendar-panel">
+        <div class="panel-heading">
+          <div>
+            <h3>Calendar</h3>
+            <p>Choose any date</p>
+          </div>
+          <div class="month-controls">
+            <button id="prevMonth" aria-label="Previous month">‹</button>
+            <button id="nextMonth" aria-label="Next month">›</button>
+          </div>
+        </div>
+
+        <div id="monthLabel" class="month-label"></div>
+
+        <div class="calendar-grid calendar-weekdays">
+          <span>Sun</span>
+          <span>Mon</span>
+          <span>Tue</span>
+          <span>Wed</span>
+          <span>Thu</span>
+          <span>Fri</span>
+          <span>Sat</span>
+        </div>
+
+        <div id="calendarDays" class="calendar-grid"></div>
+
+        <div class="legend">
+          <span><i class="dot selected-dot"></i> Selected</span>
+          <span><i class="dot today-dot"></i> Today</span>
+        </div>
+      </section>
+
+      <section class="panel schedule-panel">
+        <div class="schedule-heading">
+          <div>
+            <span class="eyebrow">DAILY OVERVIEW</span>
+            <h3 id="selectedDate">Today's Schedule</h3>
+            <p id="daySubtitle">Your classes for the selected day</p>
+          </div>
+          <div id="classCount" class="class-count">0 classes</div>
+        </div>
+
+        <div id="timetable" class="timetable"></div>
+      </section>
+    </div>
+
+    <section class="info-strip">
+      <div class="info-icon">📅</div>
+      <div>
+        <strong>Repeating weekly</strong>
+        <p>Your timetable follows the same schedule every week.
+           Select another date to view its weekday's classes.</p>
+      </div>
+    </section>
+
+    <footer>
+      <p>CSBS Student Planner · Made for your daily academic routine</p>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
